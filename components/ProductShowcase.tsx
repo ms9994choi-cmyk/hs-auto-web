@@ -13,7 +13,7 @@ const ProductShowcase: React.FC = () => {
     {
       name: "OMRON",
       // Changed to stable PNG thumbnail URL
-      logo: "/OMRON.svg",
+      logo: "/omron.png",
       url: "https://www.ia.omron.co.kr/",
       desc: "Sensing & Control + Think"
       scale: "scale-[1.8]" // 작게 나오는 옴론은 1.8배 확대
@@ -23,6 +23,7 @@ const ProductShowcase: React.FC = () => {
       logo: "/m2i.png",
       url: "https://www.m2i.co.kr/",
       desc: "Smart HMI & SCADA"
+      scale: "scale-[1.2]" // 작게 나오는 옴론은 1.8배 확대
     },
     {
       name: "LS ELECTRIC",
@@ -32,7 +33,7 @@ const ProductShowcase: React.FC = () => {
     },
     {
       name: "Weidmüller",
-      logo: "/Weidmuller.svg",
+      logo: "/weidmuller.png",
       url: "https://www.weidmuller.co.kr/ko/index.jsp",
       desc: "Industrial Connectivity"
     },

@@ -18,28 +18,28 @@ const SupportSection: React.FC = () => {
     { 
       name: "OMRON", 
       url: "https://www.ia.omron.co.kr/support/faq.asp?tb=&free_flag=&page=6&listCnt=10&wSubject=&wContent=&keyword=&present_category_code=",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Omron_Logo.svg/2560px-Omron_Logo.svg.png",
+      logo: "/OMRON.svg",
       borderColor: "hover:border-blue-500",
       bgHover: "hover:bg-blue-50"
     },
     { 
       name: "M2I", 
       url: "https://www.m2i.co.kr/service/faq.php",
-      logo: "https://www.m2i.co.kr/img/main/logo.png",
+      logo: "/m2i.png",
       borderColor: "hover:border-slate-800",
       bgHover: "hover:bg-slate-50"
     },
     { 
       name: "Autonics", 
       url: "https://www.autonics.com/kr/service/faq/list",
-      logo: "https://www.autonics.com/assets/images/common/logo.png",
+      logo: "/autonics.png",
       borderColor: "hover:border-orange-500",
       bgHover: "hover:bg-orange-50"
     },
     { 
       name: "LS ELECTRIC", 
       url: "https://sol.ls-electric.com/us/en/community/blog?utm_source=lseus&utm_medium=display&utm_campaign=lseus_comm",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/LS_Electric_logo.svg/2560px-LS_Electric_logo.svg.png",
+      logo: "/ls.png",
       borderColor: "hover:border-red-600",
       bgHover: "hover:bg-red-50"
     }

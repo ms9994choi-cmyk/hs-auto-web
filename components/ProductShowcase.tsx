@@ -99,7 +99,7 @@ const ProductShowcase: React.FC = () => {
   <img 
     src={brand.logo} 
     alt={brand.name} 
-    className="h-10 max-w-[200%] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 transform group-hover:scale-110"
+    className="h-10 w-auto max-w-[200%] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 transform group-hover:scale-110"
     // 설명: 
     // h-10: 모든 로고의 높이를 약 40px로 고정합니다. (가장 효과적인 줄 맞춤)
     // w-auto: 높이에 맞춰 가로 비율을 자동으로 유지합니다.

@@ -95,18 +95,21 @@ const ProductShowcase: React.FC = () => {
               </div>
 
               {/* Logo Container */}
-              <div className="w-full h-24 flex items-center justify-center relative z-10">
-                 <img 
-                  src={brand.logo} 
-                  alt={brand.name} 
-                  className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 transform group-hover:scale-110"
-                  onError={(e) => {
-                    // Fallback visual if image fails
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.parentElement!.innerHTML = `<span class="text-xl font-black text-slate-400 group-hover:text-slate-800">${brand.name}</span>`;
-                  }}
-                />
-              </div>
+            <div className="w-full h-24 flex items-center justify-center relative z-10 px-4"> {/* px-4 추가로 좌우 여백 확보 */}
+  <img 
+    src={brand.logo} 
+    alt={brand.name} 
+    className="w-auto h-auto max-w-[85%] max-h-[70%] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 transform group-hover:scale-105"
+    // 설명: 
+    // max-w-[85%]: 너무 가로로 긴 로고가 박스 끝에 붙지 않게 조절
+    // max-h-[70%]: 로고 높이를 일정하게 제한하여 전체적인 줄 맞춤
+    // scale-105: 호버 시 너무 크게 커지는 것을 방지 (기존 110에서 변경)
+    onError={(e) => {
+      e.currentTarget.style.display = 'none';
+      e.currentTarget.parentElement!.innerHTML = `<span class="text-xl font-black text-slate-400 group-hover:text-slate-800">${brand.name}</span>`;
+    }}
+  />
+</div>
 
               {/* Hover Text/Indicator */}
               <div className="absolute bottom-4 left-0 w-full text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">

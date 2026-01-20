@@ -13,7 +13,7 @@ const ProductShowcase: React.FC = () => {
   const brands: Brand[] = [
     {
       name: "OMRON",
-      logo: "/omron.png",
+      logo: "/OMRON.svg",
       url: "https://www.ia.omron.co.kr/",
       desc: "Sensing & Control + Think",
       scale: "scale-[1.8]" // 옴론 크게
@@ -33,7 +33,7 @@ const ProductShowcase: React.FC = () => {
     },
     {
       name: "Weidmüller",
-      logo: "/weidmuller.png",
+      logo: "/Weidmuller.svg",
       url: "https://www.weidmuller.co.kr/ko/index.jsp",
       desc: "Industrial Connectivity"
     },

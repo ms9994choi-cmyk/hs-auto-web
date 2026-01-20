@@ -8,7 +8,7 @@ const ProductShowcase: React.FC = () => {
       brand: "OMRON, LS",
       desc: "고속 처리 성능과 안정성을 갖춘 차세대 프로그래머블 로직 컨트롤러.",
       // Server/Controller room with blue lighting
-      image: "https://images.unsplash.com/photo-1563770095-25f6f3226123?auto=format&fit=crop&w=800&q=80"
+      image: "https://i.postimg.cc/d1nmynpj/plc.png"
     },
     {
       category: "HMI / Touch Panel",
@@ -26,10 +26,10 @@ const ProductShowcase: React.FC = () => {
     },
     {
       category: "Sensor / Safety",
-      brand: "OMRON, Sick, SANIL",
+      brand: "OMRON, SICK, SANIL",
       desc: "현장의 안전과 정확한 감지를 위한 각종 산업용 센서 및 안전 차단 장치.",
       // Abstract tech/sensor macro with blue light
-      image: "https://images.unsplash.com/photo-1555664424-778a18a93c87?auto=format&fit=crop&w=800&q=80"
+      image: "https://i.postimg.cc/1z8KbbC3/SAFETY.png"
     }
   ];
 

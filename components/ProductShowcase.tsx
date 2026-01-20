@@ -13,7 +13,7 @@ const ProductShowcase: React.FC = () => {
     {
       name: "OMRON",
       // Changed to stable PNG thumbnail URL
-      logo: "/omron.png",
+      logo: "/omron.svg",
       url: "https://www.ia.omron.co.kr/",
       desc: "Sensing & Control + Think"
     },
@@ -31,14 +31,14 @@ const ProductShowcase: React.FC = () => {
     },
     {
       name: "Weidmüller",
-      logo: "/weidmuller.png",
+      logo: "/weidmuller.svg",
       url: "https://www.weidmuller.co.kr/ko/index.jsp",
       desc: "Industrial Connectivity"
     },
     {
       name: "SANIL",
       // Using the official logo from SANIL website
-      logo: "/sanil.png",
+      logo: "/sanil.svg",
       url: "https://sanilsensor.com/",
       desc: "Sensor & Transformers"
     },

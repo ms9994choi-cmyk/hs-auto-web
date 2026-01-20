@@ -94,16 +94,16 @@ const ProductShowcase: React.FC = () => {
                 <ExternalLink size={18} />
               </div>
 
-              {/* Logo Container */}
-            <div className="w-full h-24 flex items-center justify-center relative z-10 px-4"> {/* px-4 추가로 좌우 여백 확보 */}
+{/* Logo Container */}
+<div className="w-full h-24 flex items-center justify-center relative z-10 px-6">
   <img 
     src={brand.logo} 
     alt={brand.name} 
-    className="w-auto h-auto max-w-[85%] max-h-[70%] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 transform group-hover:scale-105"
+    className="h-10 w-auto max-w-[80%] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 transform group-hover:scale-110"
     // 설명: 
-    // max-w-[85%]: 너무 가로로 긴 로고가 박스 끝에 붙지 않게 조절
-    // max-h-[70%]: 로고 높이를 일정하게 제한하여 전체적인 줄 맞춤
-    // scale-105: 호버 시 너무 크게 커지는 것을 방지 (기존 110에서 변경)
+    // h-10: 모든 로고의 높이를 약 40px로 고정합니다. (가장 효과적인 줄 맞춤)
+    // w-auto: 높이에 맞춰 가로 비율을 자동으로 유지합니다.
+    // max-w-[80%]: 가로로 너무 긴 로고가 박스를 넘어가지 않게 제한합니다.
     onError={(e) => {
       e.currentTarget.style.display = 'none';
       e.currentTarget.parentElement!.innerHTML = `<span class="text-xl font-black text-slate-400 group-hover:text-slate-800">${brand.name}</span>`;

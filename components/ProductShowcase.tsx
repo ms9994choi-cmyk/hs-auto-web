@@ -5,25 +5,25 @@ interface Brand {
   name: string;
   logo: string;
   url: string;
-  desc: string; // Brief description for accessibility/hover
+  desc: string;
+  scale?: string; // scale 속성 추가 (있을 수도 있고 없을 수도 있음)
 }
 
 const ProductShowcase: React.FC = () => {
   const brands: Brand[] = [
     {
       name: "OMRON",
-      // Changed to stable PNG thumbnail URL
       logo: "/omron.png",
       url: "https://www.ia.omron.co.kr/",
-      desc: "Sensing & Control + Think"
-      scale: "scale-[1.8]" // 작게 나오는 옴론은 1.8배 확대
+      desc: "Sensing & Control + Think",
+      scale: "scale-[1.8]" // 옴론 크게
     },
     {
       name: "M2I",
       logo: "/m2i.png",
       url: "https://www.m2i.co.kr/",
-      desc: "Smart HMI & SCADA"
-      scale: "scale-[1.2]" // 작게 나오는 옴론은 1.8배 확대
+      desc: "Smart HMI & SCADA",
+      scale: "scale-[1.2]" 
     },
     {
       name: "LS ELECTRIC",
@@ -39,11 +39,10 @@ const ProductShowcase: React.FC = () => {
     },
     {
       name: "SANIL",
-      // Using the official logo from SANIL website
-      logo: "/sanil.svg",
+      logo: "/sanil.png", 
       url: "https://sanilsensor.com/",
-      desc: "Sensor & Transformers"
-      scale: "scale-[2.2]" // 산일은 더 작다면 2.2배 확대
+      desc: "Sensor & Transformers",
+      scale: "scale-[2.2]" // 산일 아주 크게
     },
     {
       name: "Azbil",
@@ -92,29 +91,24 @@ const ProductShowcase: React.FC = () => {
               rel="noopener noreferrer"
               className="group relative flex flex-col items-center justify-center p-8 bg-white rounded-2xl border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-blue-400 hover:-translate-y-2 h-48"
             >
-              {/* External Link Icon Overlay */}
               <div className="absolute top-4 right-4 text-slate-300 group-hover:text-blue-500 transition-colors">
                 <ExternalLink size={18} />
               </div>
 
-{/* Logo Container */}
-<div className="w-full h-24 flex items-center justify-center relative z-10 px-6">
-  <img 
-    src={brand.logo} 
-    alt={brand.name} 
-    className="h-10 w-auto max-w-[200%] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 transform group-hover:scale-110"
-    // 설명: 
-    // h-10: 모든 로고의 높이를 약 40px로 고정합니다. (가장 효과적인 줄 맞춤)
-    // w-auto: 높이에 맞춰 가로 비율을 자동으로 유지합니다.
-    // max-w-[80%]: 가로로 너무 긴 로고가 박스를 넘어가지 않게 제한합니다.
-    onError={(e) => {
-      e.currentTarget.style.display = 'none';
-      e.currentTarget.parentElement!.innerHTML = `<span class="text-xl font-black text-slate-400 group-hover:text-slate-800">${brand.name}</span>`;
-    }}
-  />
-</div>
+              {/* Logo Container */}
+              <div className="w-full h-24 flex items-center justify-center relative z-10 px-6 overflow-hidden">
+                <img 
+                  src={brand.logo} 
+                  alt={brand.name} 
+                  // 핵심 수정 부분: 템플릿 리터럴(``)을 사용하여 brand.scale을 적용합니다.
+                  className={`h-10 w-auto max-w-[100%] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 transform ${brand.scale || 'scale-100'} group-hover:scale-[1.1]`}
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = `<span class="text-xl font-black text-slate-400 group-hover:text-slate-800">${brand.name}</span>`;
+                  }}
+                />
+              </div>
 
-              {/* Hover Text/Indicator */}
               <div className="absolute bottom-4 left-0 w-full text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <span className="text-xs font-bold text-blue-600 flex items-center justify-center gap-1">
                   Visit Website <MousePointerClick size={12} />

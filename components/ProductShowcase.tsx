@@ -13,50 +13,50 @@ const ProductShowcase: React.FC = () => {
     {
       name: "OMRON",
       // Changed to stable PNG thumbnail URL
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Omron_Logo.svg/2560px-Omron_Logo.svg.png",
+      logo: "/omron.png",
       url: "https://www.ia.omron.co.kr/",
       desc: "Sensing & Control + Think"
     },
     {
       name: "M2I",
-      logo: "https://www.m2i.co.kr/img/main/logo.png",
+      logo: "/m2i.png",
       url: "https://www.m2i.co.kr/",
       desc: "Smart HMI & SCADA"
     },
     {
       name: "LS ELECTRIC",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/LS_Electric_logo.svg/2560px-LS_Electric_logo.svg.png",
+      logo: "/ls.png",
       url: "https://www.ls-electric.com/ko/",
       desc: "Futuring Smart Energy"
     },
     {
       name: "Weidmüller",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Weidmueller_Logo.svg/2560px-Weidmueller_Logo.svg.png",
+      logo: "/weidmuller.png",
       url: "https://www.weidmuller.co.kr/ko/index.jsp",
       desc: "Industrial Connectivity"
     },
     {
       name: "SANIL",
       // Using the official logo from SANIL website
-      logo: "http://www.sanil.co.kr/images/common/logo.gif",
+      logo: "/sanil.png",
       url: "https://sanilsensor.com/",
       desc: "Sensor & Transformers"
     },
     {
       name: "Azbil",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Azbil_logo.svg/2560px-Azbil_logo.svg.png",
+      logo: "/azbil.png",
       url: "https://aa-industrial.azbil.com/akr/home",
       desc: "Automation for Human Centric"
     },
     {
       name: "Autonics",
-      logo: "https://www.autonics.com/assets/images/common/logo.png", 
+      logo: "/autonics.png", 
       url: "https://www.autonics.com/kr/main",
       desc: "Sensors & Controllers"
     },
     {
       name: "Innovance",
-      logo: "https://www.inovance.com/hubfs/raw_assets/public/Innovance_July2021/images/innovance-logo.svg",
+      logo: "/inovance.png",
       url: "https://www.inovance.co.kr/",
       desc: "Industrial Automation"
     }

@@ -16,7 +16,7 @@ const ProductShowcase: React.FC = () => {
       logo: "/OMRON.svg",
       url: "https://www.ia.omron.co.kr/",
       desc: "Sensing & Control + Think",
-      scale: "scale-[1.8]" // 옴론 크게
+      scale: "scale-[1.2]" // 옴론 크게
     },
     {
       name: "M2I",
@@ -42,7 +42,7 @@ const ProductShowcase: React.FC = () => {
       logo: "/sanil.png", 
       url: "https://sanilsensor.com/",
       desc: "Sensor & Transformers",
-      scale: "scale-[2.2]" // 산일 아주 크게
+      scale: "scale-[5.1]" // 산일 아주 크게
     },
     {
       name: "Azbil",

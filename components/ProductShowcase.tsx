@@ -6,7 +6,8 @@ interface Brand {
   logo: string;
   url: string;
   desc: string;
-  scale?: string; // scale 속성 추가 (있을 수도 있고 없을 수도 있음)
+  scale?: string; 
+  hoverScale?: string; // 호버 시 크기를 별도로 지정하는 속성 추가
 }
 
 const ProductShowcase: React.FC = () => {
@@ -16,20 +17,23 @@ const ProductShowcase: React.FC = () => {
       logo: "/OMRON.svg",
       url: "https://www.ia.omron.co.kr/",
       desc: "Sensing & Control + Think",
-      scale: "scale-[1.2]" // 옴론 크게
+      scale: "scale-[1.2]",
+      hoverScale: "group-hover:scale-[1.3]" // 기본 scale보다 살짝 크게
     },
     {
       name: "M2I",
       logo: "/m2i.png",
       url: "https://www.m2i.co.kr/",
       desc: "Smart HMI & SCADA",
-      scale: "scale-[1.2]" 
+      scale: "scale-[1.5]",
+      hoverScale: "group-hover:scale-[1.6]"
     },
     {
       name: "LS ELECTRIC",
       logo: "/ls.png",
       url: "https://www.ls-electric.com/ko/",
       desc: "Futuring Smart Energy"
+      // 기본값(1.0) 사용 시 hoverScale 생략 가능 (기본 1.1 적용)
     },
     {
       name: "Weidmüller",
@@ -42,7 +46,8 @@ const ProductShowcase: React.FC = () => {
       logo: "/sanil.png", 
       url: "https://sanilsensor.com/",
       desc: "Sensor & Transformers",
-      scale: "scale-[5.1]" // 산일 아주 크게
+      scale: "scale-[5.1]", 
+      hoverScale: "group-hover:scale-[5.5]" // ★ 뒤지게 작아지지 않도록 크게 유지!
     },
     {
       name: "Azbil",
@@ -100,26 +105,6 @@ const ProductShowcase: React.FC = () => {
                 <img 
                   src={brand.logo} 
                   alt={brand.name} 
-                  // 핵심 수정 부분: 템플릿 리터럴(``)을 사용하여 brand.scale을 적용합니다.
-                  className={`h-10 w-auto max-w-[100%] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 transform ${brand.scale || 'scale-100'} group-hover:scale-[1.1]`}
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.parentElement!.innerHTML = `<span class="text-xl font-black text-slate-400 group-hover:text-slate-800">${brand.name}</span>`;
-                  }}
-                />
-              </div>
-
-              <div className="absolute bottom-4 left-0 w-full text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                <span className="text-xs font-bold text-blue-600 flex items-center justify-center gap-1">
-                  Visit Website <MousePointerClick size={12} />
-                </span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default ProductShowcase;
+                  // 수정 포인트: 고정된 1.1 대신 brand.hoverScale이 있으면 사용하고 없으면 기본 1.1 사용
+                  className={`h-10 w-auto max-w-[100%] object-contain grayscale group-hover:grayscale-0 transition-all duration-500 opacity-80 group-hover:opacity-100 transform ${brand.scale || 'scale-100'} ${brand.hoverScale || 'group-hover:scale-[1.1]'}`}
+                  onError={(e) =>

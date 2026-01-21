@@ -47,7 +47,7 @@ const ProductShowcase: React.FC = () => {
       url: "https://sanilsensor.com/",
       desc: "Sensor & Transformers",
       scale: "scale-[5.1]", 
-      hoverScale: "group-hover:scale-[5.5]" // ★ 뒤지게 작아지지 않도록 크게 유지!
+      hoverScale: "group-hover:scale-[5.4]" // ★ 뒤지게 작아지지 않도록 크게 유지!
     },
     {
       name: "Azbil",
